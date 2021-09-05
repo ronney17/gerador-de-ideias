@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roney / roneysantos7711@gmail.com">
+
+    <title>Gerador De Projetos</title>
+    <meta name="description"
+        content="Está com dificuldade para decidir um projeto para fazer? Gere um automaticamente com nossa ferramenta.">
+    <meta name="keywords" content="gerador de ideias, gerador de projetos">
+    <meta name="robots" content="index,follow,noodp,noydir">
+    <link rel="icon" href="assets/lamp.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="app">
+        <menu-topo></menu-topo>
+
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <h1>Selecione os filtros abaixo para gerar uma ideia de projeto automaticamente</h1>
+                <!-- Botões níveis -->
+                <div>
+                    <p>Nível:</p>
+                    <div class="btn-group">
+                        <input value="simples" v-model="checkedNivel" name="checkNivel" type="radio" class="btn-check"
+                            id="btnSimples">
+                        <label class="btn btn-outline-success" for="btnSimples">Simples</label>
+
+                        <input value="mediano" v-model="checkedNivel" name="checkNivel" type="radio" class="btn-check"
+                            id="btnMediano">
+                        <label class="btn btn-outline-success" for="btnMediano">Mediano</label>
+
+                        <input value="avancado" v-model="checkedNivel" name="checkNivel" type="radio" class="btn-check"
+                            id="btnAvancado">
+                        <label class="btn btn-outline-success" for="btnAvancado">Avançado</label>
+
+                        <input value="godLevel" v-model="checkedNivel" name="checkNivel" type="radio" class="btn-check"
+                            id="btnGod">
+                        <label class="btn btn-outline-success" for="btnGod">God level</label>
+                    </div>
+                </div>
+                <!-- Botões categoria -->
+                <div>
+                    <p>Categoria:</p>
+                    <div class="btn-group">
+                        <input value="jogos" v-model="checkedCategoria" name="checkCategoria" type="radio"
+                            class="btn-check" id="btnJogos">
+                        <label class="btn btn-outline-success" for="btnJogos">Jogos</label>
+
+                        <input value="sites" v-model="checkedCategoria" name="checkCategoria" type="radio"
+                            class="btn-check" id="btnSites">
+                        <label class="btn btn-outline-success" for="btnSites">Sites</label>
+
+                        <input value="softwares" v-model="checkedCategoria" name="checkCategoria" type="radio"
+                            class="btn-check" id="btnSoftwares">
+                        <label class="btn btn-outline-success" for="btnSoftwares">Softwares</label>
+
+                        <input value="aplicativos" v-model="checkedCategoria" name="checkCategoria" type="radio"
+                            class="btn-check" id="btnAplicativos">
+                        <label class="btn btn-outline-success" for="btnAplicativos">Aplicativos</label>
+                    </div>
+                </div>
+            </div>
+            <div @click="gerador" class="d-flex flex-wrap justify-content-center">
+                <button type="button" class="btn btn-success">Gerar</button>
+            </div>
+            <div id="res" class="d-flex flex-wrap justify-content-center">
+                <h2> {{ projetoGerado }} </h2>
+            </div>
+        </div>
+
+        <rodape-bottom></rodape-bottom>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/gerador.js"></script>
+</body>
+
+</html>
