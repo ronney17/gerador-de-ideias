@@ -42,7 +42,7 @@ var app = new Vue({
         checkedCategoria: "",
         simples: {
             jogos: ["Crie um jogo estilo cobrinha", "Crie um jogo com uso do Lançamento Oblíquo", "Crie um jogo de plataforma"],
-            sites: ["Desenvolva uma página de noticias", "Desenvolva um site que mostre um vídeo do youtube"],
+            sites: ["Crie um formulário de cadastro que guarda os dados em variáveis e imprime no console","Desenvolva uma página de noticias", "Desenvolva um site que mostre um vídeo do youtube"],
             softwares: ["Desenvolva uma calculadora sem interface"],
             aplicativos: ["Desenvolva um app que some duas entradas para android"],
         }, mediano: {
