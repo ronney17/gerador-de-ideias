@@ -1,13 +1,13 @@
 Vue.component('menu-topo', {
     template: `
-    <header id="menu">
+    <header class="menu py-3">
         <div class="container">
             <div class="d-flex">
                 <a href="index.html">
                     <img src="assets/lamp-w-outline.png" style="width: 40px;" alt="logo">
                 </a>
                 <ul class="nav me-lg-auto">
-                    <li><a href="index.html" class="nav-link text-black">Gerador de projetos</a></li>
+                    <li><a href="index.html" class="nav-link text-black">Gerador de ideias</a></li>
                 </ul>
                 <div class="text-end">
                     <ul class="nav me-lg-auto">
@@ -22,18 +22,19 @@ Vue.component('menu-topo', {
 
 Vue.component('rodape-bottom', {
     template: `
-    <footer id="rodape" class="d-flex align-items-center justify-content-center fixed-bottom">
+    <footer class="rodape d-flex align-items-center justify-content-center fixed-bottom py-3">
         <div class="col-md-8 d-flex justify-content-center">
             <a href="index.html" class="me-2">
                 <img width="24" height="24" src="assets/lamp.png" alt="logo">
             </a>
             <span class="text-black"> 2021 | Roney </span>
         </div>
-        <a href="https://www.linkedin.com/in/roney-s-a8b463110/" target="_blank"><img width="24" height="24"
+        <a class="px-2" href="https://www.linkedin.com/in/roney-s-a8b463110/" target="_blank"><img width="24" height="24"
                 src="assets/linkedin-logo.png" alt="linkedin"></a>
     </footer>`,
 })
 
+//To do -  Add mais projeto e uma descrição 
 var app = new Vue({
     el: '#app',
     data: {
@@ -63,6 +64,7 @@ var app = new Vue({
         },
     },
     methods: {
+        //To do - Refatorar gerador
         gerador() {
 
             //Verifica se tem um nivel e categoria selecionado. Se não emite um alerta
@@ -75,54 +77,70 @@ var app = new Vue({
             //Nivel simples
             if (this.checkedNivel == "simples" && this.checkedCategoria == "jogos") {
                 this.projetoGerado = this.simples.jogos[Math.floor(Math.random() * this.simples.jogos.length)];
+                
             }
             else if (this.checkedNivel == "simples" && this.checkedCategoria == "sites") {
                 this.projetoGerado = this.simples.sites[Math.floor(Math.random() * this.simples.sites.length)];
+                
             }
             else if (this.checkedNivel == "simples" && this.checkedCategoria == "softwares") {
                 this.projetoGerado = this.simples.softwares[Math.floor(Math.random() * this.simples.softwares.length)];
+                
             }
             else if (this.checkedNivel == "simples" && this.checkedCategoria == "aplicativos") {
                 this.projetoGerado = this.simples.aplicativos[Math.floor(Math.random() * this.simples.aplicativos.length)];
+                
             }
             //Nivel mediano
             else if (this.checkedNivel == "mediano" && this.checkedCategoria == "jogos") {
                 this.projetoGerado = this.mediano.jogos[Math.floor(Math.random() * this.mediano.jogos.length)];
+                
             }
             else if (this.checkedNivel == "mediano" && this.checkedCategoria == "sites") {
                 this.projetoGerado = this.mediano.sites[Math.floor(Math.random() * this.mediano.sites.length)];
+                
             }
             else if (this.checkedNivel == "mediano" && this.checkedCategoria == "softwares") {
                 this.projetoGerado = this.mediano.softwares[Math.floor(Math.random() * this.mediano.softwares.length)];
+                
             }
             else if (this.checkedNivel == "mediano" && this.checkedCategoria == "aplicativos") {
                 this.projetoGerado = this.mediano.aplicativos[Math.floor(Math.random() * this.mediano.aplicativos.length)];
+                
             }
             //Nivel avancado
             else if (this.checkedNivel == "avancado" && this.checkedCategoria == "jogos") {
                 this.projetoGerado = this.avancado.jogos[Math.floor(Math.random() * this.avancado.jogos.length)];
+                
             }
             else if (this.checkedNivel == "avancado" && this.checkedCategoria == "sites") {
                 this.projetoGerado = this.avancado.sites[Math.floor(Math.random() * this.avancado.sites.length)];
+                
             }
             else if (this.checkedNivel == "avancado" && this.checkedCategoria == "softwares") {
                 this.projetoGerado = this.avancado.softwares[Math.floor(Math.random() * this.avancado.softwares.length)];
+                
             }
             else if (this.checkedNivel == "avancado" && this.checkedCategoria == "aplicativos") {
                 this.projetoGerado = this.avancado.aplicativos[Math.floor(Math.random() * this.avancado.aplicativos.length)];
+                
             }
             //Nivel godLevel
             else if (this.checkedNivel == "godLevel" && this.checkedCategoria == "jogos") {
                 this.projetoGerado = this.godLevel.jogos[Math.floor(Math.random() * this.godLevel.jogos.length)];
+                
             }
             else if (this.checkedNivel == "godLevel" && this.checkedCategoria == "sites") {
                 this.projetoGerado = this.godLevel.sites[Math.floor(Math.random() * this.godLevel.sites.length)];
+                
             }
             else if (this.checkedNivel == "godLevel" && this.checkedCategoria == "softwares") {
                 this.projetoGerado = this.godLevel.softwares[Math.floor(Math.random() * this.godLevel.softwares.length)];
+                
             }
             else if (this.checkedNivel == "godLevel" && this.checkedCategoria == "aplicativos") {
                 this.projetoGerado = this.godLevel.aplicativos[Math.floor(Math.random() * this.godLevel.aplicativos.length)];
+                
             }
         }
     }

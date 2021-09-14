@@ -37,7 +37,7 @@
 
         <div class="container">
             <div class="d-flex flex-wrap justify-content-between align-items-center">
-                <h1>Selecione os filtros abaixo para gerar uma ideia de projeto automaticamente</h1>
+                <h1 class="text-center pt-15">Selecione os filtros abaixo para gerar uma ideia de projeto automaticamente</h1>
                 <!-- Botões níveis -->
                 <div>
                     <p>Nível:</p>
@@ -81,11 +81,11 @@
                     </div>
                 </div>
             </div>
-            <div @click="gerador" class="d-flex flex-wrap justify-content-center">
+            <div @click="gerador" class="d-flex flex-wrap justify-content-center py-5">
                 <button type="button" class="btn btn-success">Gerar</button>
             </div>
-            <div id="res" class="d-flex flex-wrap justify-content-center">
-                <h2> {{ projetoGerado }} </h2>
+            <div class="d-flex flex-wrap justify-content-center pb-5">
+                <h2 class="text-center py-5"> {{ projetoGerado }} </h2>
             </div>
         </div>
 
@@ -95,5 +95,4 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="js/gerador.js"></script>
 </body>
-
 </html>
