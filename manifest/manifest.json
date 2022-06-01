@@ -1,0 +1,32 @@
+{
+    "theme_color": "#66cc33",
+    "background_color": "#09f",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/index.html",
+    "name": "Gerador de ideias PWA",
+    "short_name": "Gerador de ideias",
+    "description": "Est\u00e1 com dificuldade para ter ideias de um projeto para fazer? Gere um automaticamente com nossa ferramenta.  Criado por Roney com o objetivo de gerar ideias para projetos de cria\u00e7\u00e3o de jogos, sites, softwares e aplicativos. Para aprender mais sobre programa\u00e7\u00e3o HTML, CSS, Javascript, bootstrap e Vue.js.",
+    "icons": [
+        {
+            "src": "./icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "./icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "./icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

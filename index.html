@@ -24,6 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
 
+    <link rel="manifest" href="./manifest/manifest.json">
+    <meta name="theme-color" content="#66cc33"/>
+
 </head>
 
 <body>
@@ -96,6 +99,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="js/gerador.js"></script>
+
+    <script>
+        if ("serviceWorker" in navigator){
+            navigator.serviceWorker.register("./service-worker.js");
+        }
+    </script>
 </body>
 
 </html>
